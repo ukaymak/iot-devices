@@ -1,0 +1,138 @@
+{
+	"info": {
+		"_postman_id": "c2c4e96b-60bf-4c3e-be4d-20cd8a8b11e8",
+		"name": "vodafone",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get by waiting for application",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/device/filter?simCardStatus=WAITING_FOR_ACTIVATION",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"device",
+						"filter"
+					],
+					"query": [
+						{
+							"key": "simCardStatus",
+							"value": "WAITING_FOR_ACTIVATION"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "order by isconfigurated",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/device/order",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"device",
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add device",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"temperature\": 45,\r\n        \"simCard\": {\r\n            \"operatorCode\": 556,\r\n            \"countryName\": \"ENGLAND\",\r\n            \"simCardStatus\": \"READY\"\r\n        }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/device",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"device"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update device",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 23,\r\n    \"isConfigurated\": false,\r\n    \"temperature\": 150,\r\n    \"simCard\": {\r\n        \"simID\": 22,\r\n        \"operatorCode\": 100,\r\n        \"countryName\": \"BAYBURT\",\r\n        \"simCardStatus\": \"BLOCKED\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/device",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"device"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete device",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/device/{id}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"device",
+						"{id}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
