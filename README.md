@@ -4,9 +4,13 @@ Building the project
 You will need:
 
 Java JDK 11
+
 Spring Boot 2.5.5
+
 Maven 3.8.2 or higher
+
 Git
+
 PostgreSQL Databese
 
 Clone the project and use Maven to build the server
