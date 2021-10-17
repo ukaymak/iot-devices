@@ -18,7 +18,7 @@ Clone the project and use Maven to build the server
 
 data.sql and shema.sql scrips in resource folder.
 
-After first run, below mode should be embedded
+After first run, below mode should be "embedded"
 
 application.properties file
 
