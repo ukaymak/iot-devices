@@ -26,7 +26,7 @@ public class IOTDeviceController {
     }
 
 
-    @PostMapping()
+    @PostMapping
     public ResponseEntity<IOTDeviceResponse> createDevice(@RequestBody IOTDeviceRequest iotDeviceRequest){
 
         IOTDeviceDto deviceDto = iotDeviceService.createDevice(dozerMapper.map(iotDeviceRequest,IOTDeviceDto.class));
@@ -35,7 +35,7 @@ public class IOTDeviceController {
     }
 
 
-    @GetMapping(path = "/order")
+    @GetMapping
     public ResponseEntity<List<IOTDeviceResponse>> getAllDevice() {
 
         List<IOTDeviceDto> deviceDtoList = iotDeviceService.getAllDevice();
@@ -53,7 +53,7 @@ public class IOTDeviceController {
          iotDeviceService.deleteDevice(id);
     }
 
-    @PutMapping()
+    @PutMapping
     public ResponseEntity<IOTDeviceResponse> updateDevice(@RequestBody IOTDeviceRequest deviceRequest) {
 
         IOTDeviceDto deviceDto = iotDeviceService.updateDevice(dozerMapper.map(deviceRequest,IOTDeviceDto.class));
@@ -61,7 +61,7 @@ public class IOTDeviceController {
 
     }
 
-    @GetMapping("/filter")
+    @GetMapping("/status")
     public ResponseEntity<List<IOTDeviceResponse>> getByStatus(@ModelAttribute("simCardStatus") SimCardStatusEnum simCardStatus){
 
         List<IOTDeviceDto> deviceDtoList = iotDeviceService.getByStatus(simCardStatus);

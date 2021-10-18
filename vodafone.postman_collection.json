@@ -11,7 +11,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/device/filter?simCardStatus=WAITING_FOR_ACTIVATION",
+					"raw": "http://localhost:8080/device/status?simCardStatus=WAITING_FOR_ACTIVATION",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -19,7 +19,7 @@
 					"port": "8080",
 					"path": [
 						"device",
-						"filter"
+						"status"
 					],
 					"query": [
 						{
@@ -44,15 +44,14 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:8080/device/order",
+					"raw": "http://localhost:8080/device",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"device",
-						"order"
+						"device"
 					]
 				}
 			},
